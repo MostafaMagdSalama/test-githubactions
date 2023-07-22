@@ -1,0 +1,11 @@
+on: push
+jobs:
+  build-node:
+    runs-on: ubuntu-latest
+    container: node:20
+    steps:
+      - runs: node --version
+      - runs: npm --version
+      - runs: npm install
+      - runs: npm run test
+
